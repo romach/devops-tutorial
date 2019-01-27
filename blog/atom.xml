@@ -14,7 +14,7 @@
         <link href="https://romach.github.io/devops-tutorial/blog/2019/01/27/greeting-on-devops-tutorial-site.html">
         </link>
         <updated>2019-01-27T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Hello this is tutorial about DevOps tools and practices. A will write articles about <strong>Docker</strong>, <strong>Ansible</strong>, <strong>Terraform</strong>.</p> ]]></summary>
+        <summary type="html"><![CDATA[<p>Hello! This is tutorial about DevOps tools and practices. A will write articles about <strong>Docker</strong>, <strong>Ansible</strong>, <strong>Terraform</strong>.</p> ]]></summary>
         <author>
             <name>Roman Cherepanov</name>
             <uri>https://www.facebook.com/profile.php?id=1827649688</uri>
