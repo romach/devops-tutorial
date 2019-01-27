@@ -98,6 +98,8 @@ const siteConfig = {
   gaTrackingId: 'UA-133351340-1',
 
   gaGtag: true,
+
+  scrollToTop: true
 };
 
 module.exports = siteConfig;
