@@ -99,7 +99,9 @@ const siteConfig = {
 
   gaGtag: true,
 
-  scrollToTop: true
+  scrollToTop: true,
+
+  docsSideNavCollapsible: true,
 };
 
 module.exports = siteConfig;
