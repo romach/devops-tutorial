@@ -22,7 +22,7 @@ jobs:
             git config --global user.email "romach@users.noreply.github.com"
             git config --global user.name "romach"
             echo "machine github.com login romach password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install && GIT_USER=romach USE_SSH=true yarn run publish-gh-pages
+            cd website && yarn install && GIT_USER=romach yarn run publish-gh-pages
 
 workflows:
   version: 2
