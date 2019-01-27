@@ -14,6 +14,7 @@ const users = [
 ];
 
 const baseUrl = '/devops-tutorial/';
+const repoUrl = 'https://github.com/romach/devops-tutorial/';
 
 const siteConfig = {
   title: 'DevOps tutorial', // Title for your website.
@@ -37,6 +38,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'doc1', label: 'Tutorial'},
     {blog: true, label: 'Blog'},
+    {href: repoUrl, label: 'GitHub' },
   ],
 
   // If you have users set above, you add it here:
@@ -100,7 +102,7 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  repoUrl: 'https://github.com/romach/devops-tutorial/',
+  repoUrl: repoUrl,
 
   gaTrackingId: 'UA-133351340-1',
 
