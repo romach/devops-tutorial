@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>DevOps tutorial Blog</title>
+        <link>https://romach.github.io/devops-tutorial/blog</link>
+        <description>The best place to stay up-to-date with the latest DevOps tutorial news and events.</description>
+        <lastBuildDate>Sun, 27 Jan 2019 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>DevOps tutorial Blog</title>
+            <url>https://romach.github.io/devops-tutorial/img/gear.svg</url>
+            <link>https://romach.github.io/devops-tutorial/blog</link>
+        </image>
+        <copyright>Copyright © 2019 Roman Cherepanov</copyright>
+        <item>
+            <title><![CDATA[Greetings]]></title>
+            <link>https://romach.github.io/devops-tutorial/blog/2019/01/27/greeting-on-devops-tutorial-site.html</link>
+            <guid>https://romach.github.io/devops-tutorial/blog/2019/01/27/greeting-on-devops-tutorial-site.html</guid>
+            <pubDate>Sun, 27 Jan 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Hello this is tutorial about DevOps tools and practices. A will write articles about <strong>Docker</strong>, <strong>Ansible</strong>, <strong>Terraform</strong>.</p> ]]></description>
+        </item>
+    </channel>
+</rss>
