@@ -13,13 +13,15 @@ const users = [
 
 ];
 
+const baseUrl = '/devops-tutorial/';
+
 const siteConfig = {
   title: 'DevOps tutorial', // Title for your website.
   tagline: 'Useful tutorials for DevOps engineers',
   //url: 'https://your-docusaurus-test-site.com', // Your website URL
   //baseUrl: '/', // Base URL for your project */
   url: 'https://romach.github.io', // Your website URL
-  baseUrl: '/devops-tutorial/', // Base URL for your project */
+  baseUrl, // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -70,11 +72,16 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: 'default',
+    theme: 'darcula',
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+    `${baseUrl}js/code-block-buttons.js`,
+  ],
+  stylesheets: [`${baseUrl}css/code-block-buttons.css`],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
