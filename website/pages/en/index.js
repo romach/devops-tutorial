@@ -216,6 +216,16 @@ class Index extends React.Component {
           {/*<TryOut/>*/}
           {/*<Description/>*/}
           {/*<Showcase/>*/}
+          {/*{JSON.stringify(lastBlogPosts)}*/}
+          <div>
+            <script type="text/javascript" dangerouslySetInnerHTML={{
+              __html: `
+              ((window.gitter = {}).chat = {}).options = {
+                    room: 'devops-tutorial-chat'
+                  };
+            `}} />
+            <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+          </div>
         </div>
       </div>
     );
