@@ -66,6 +66,7 @@ class HomeSplash extends React.Component {
           <PromoSection>
             <Button href={docUrl('doc1.html')}>Tutorial</Button>
             <Button href={`${baseUrl}blog`}>Blog</Button>
+            <Button href="https://gitter.im/devops-tutorial-chat/community">Chat</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -216,16 +217,6 @@ class Index extends React.Component {
           {/*<TryOut/>*/}
           {/*<Description/>*/}
           {/*<Showcase/>*/}
-          {/*{JSON.stringify(lastBlogPosts)}*/}
-          <div>
-            <script type="text/javascript" dangerouslySetInnerHTML={{
-              __html: `
-              ((window.gitter = {}).chat = {}).options = {
-                    room: 'devops-tutorial-chat'
-                  };
-            `}} />
-            <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-          </div>
         </div>
       </div>
     );
