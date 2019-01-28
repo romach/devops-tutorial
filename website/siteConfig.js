@@ -15,6 +15,7 @@ const users = [
 
 const baseUrl = '/devops-tutorial/';
 const repoUrl = 'https://github.com/romach/devops-tutorial/';
+const chatUrl = 'https://gitter.im/devops-tutorial-chat/community';
 
 const siteConfig = {
   title: 'DevOps tutorial', // Title for your website.
@@ -23,6 +24,7 @@ const siteConfig = {
   //baseUrl: '/', // Base URL for your project */
   url: 'https://romach.github.io', // Your website URL
   baseUrl, // Base URL for your project */
+  chatUrl, // Chat url */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -37,6 +39,8 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'doc1', label: 'Tutorial'},
+    {blog: true, label: 'Blog'},
+    {href: chatUrl, label: 'Chat' },
     {href: repoUrl, label: 'GitHub' },
   ],
 
