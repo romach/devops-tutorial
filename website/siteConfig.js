@@ -86,7 +86,7 @@ const siteConfig = {
     'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
     `${baseUrl}js/code-block-buttons.js`,
   ],
-  stylesheets: [`${baseUrl}css/code-block-buttons.css`],
+  stylesheets: [],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
