@@ -65,7 +65,6 @@ class HomeSplash extends React.Component {
           <ProjectTitle siteConfig={siteConfig}/>
           <PromoSection>
             <Button href={docUrl('doc1.html')}>Tutorial</Button>
-            <Button href={`${baseUrl}blog`}>Blog</Button>
             <Button href="https://gitter.im/devops-tutorial-chat/community">Chat</Button>
           </PromoSection>
         </div>
@@ -142,7 +141,7 @@ class Index extends React.Component {
     );
 
     const Features = () => (
-      <Block layout="fourColumn">
+      <Block layout="fourColumn" background="light">
         {[
           {
             content: 'This is the content of my feature',
@@ -167,12 +166,6 @@ class Index extends React.Component {
             image: `${baseUrl}img/gear.svg`,
             imageAlign: 'top',
             title: 'Feature four',
-          },
-          {
-            content: 'The content of my fifth feature',
-            image: `${baseUrl}img/gear.svg`,
-            imageAlign: 'top',
-            title: 'Feature five',
           },
         ]}
       </Block>
