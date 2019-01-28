@@ -12,9 +12,7 @@ const MetadataBlog = require('../../core/MetadataBlog.js');
 const BlogPost = require('../../core/BlogPost.js');
 const utils = require('../../core/utils.js');
 
-const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
-const GridBlock = CompLibrary.GridBlock;
 
 const Button = props => (
   <div className="pluginWrapper buttonWrapper">
@@ -82,128 +80,6 @@ class Index extends React.Component {
     const {config: siteConfig, language = ''} = this.props;
     const {baseUrl} = siteConfig;
 
-    const Block = props => (
-      <Container
-        padding={['bottom', 'top']}
-        id={props.id}
-        background={props.background}>
-        <GridBlock
-          align="center"
-          contents={props.children}
-          layout={props.layout}
-        />
-      </Container>
-    );
-
-    const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-      </div>
-    );
-
-    const TryOut = () => (
-      <Block id="try">
-        {[
-          {
-            content: 'Talk about trying this out',
-            image: `${baseUrl}img/docusaurus.svg`,
-            imageAlign: 'left',
-            title: 'Try it Out',
-          },
-        ]}
-      </Block>
-    );
-
-    const Description = () => (
-      <Block background="dark">
-        {[
-          {
-            content:
-              'This is another description of how this project is useful',
-            image: `${baseUrl}img/docusaurus.svg`,
-            imageAlign: 'right',
-            title: 'Description',
-          },
-        ]}
-      </Block>
-    );
-
-    const LearnHow = () => (
-      <Block background="light">
-        {[
-          {
-            content: 'Talk about learning how to use this',
-            image: `${baseUrl}img/gear.svg`,
-            imageAlign: 'right',
-            title: 'Learn How',
-          },
-        ]}
-      </Block>
-    );
-
-    const Features = () => (
-      <Block layout="fourColumn" background="light">
-        {[
-          {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/gear.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
-          },
-          {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/gear.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
-          },
-          {
-            content: 'The content of my third feature',
-            image: `${baseUrl}img/gear.svg`,
-            imageAlign: 'top',
-            title: 'Feature three',
-          },
-          {
-            content: 'The content of my fourth feature',
-            image: `${baseUrl}img/gear.svg`,
-            imageAlign: 'top',
-            title: 'Feature four',
-          },
-        ]}
-      </Block>
-    );
-
-    const Showcase = () => {
-      if ((siteConfig.users || []).length === 0) {
-        return null;
-      }
-
-      const showcase = siteConfig.users
-        .filter(user => user.pinned)
-        .map(user => (
-          <a href={user.infoLink} key={user.infoLink}>
-            <img src={user.image} alt={user.caption} title={user.caption}/>
-          </a>
-        ));
-
-      const pageUrl = page => baseUrl + (language ? `${language}/` : '') + page;
-
-      return (
-        <div className="productShowcaseSection paddingBottom">
-          <h2>Who is Using This?</h2>
-          <p>This project is used by all these people</p>
-          <div className="logos">{showcase}</div>
-          <div className="more-users">
-            <a className="button" href={pageUrl('users.html')}>
-              More {siteConfig.title} Users
-            </a>
-          </div>
-        </div>
-      );
-    };
-
     const LastBlogPosts = () => (
       <Container className="mainContainer postContainer blogContainer">
         <h1>Latest news</h1>
@@ -231,12 +107,6 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language}/>
         <div className="mainContainer">
-          <Features/>
-          {/*<FeatureCallout />*/}
-          {/*<LearnHow/>*/}
-          {/*<TryOut/>*/}
-          {/*<Description/>*/}
-          {/*<Showcase/>*/}
           <LastBlogPosts/>
         </div>
       </div>
