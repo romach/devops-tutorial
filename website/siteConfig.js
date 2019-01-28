@@ -114,6 +114,8 @@ const siteConfig = {
   scrollToTop: true,
 
   docsSideNavCollapsible: true,
+
+  editUrl: `${repoUrl}edit/master/docs/`,
 };
 
 module.exports = siteConfig;
