@@ -116,6 +116,12 @@ const siteConfig = {
   docsSideNavCollapsible: true,
 
   editUrl: `${repoUrl}edit/master/docs/`,
+
+  markdownPlugins: [
+    (md) => {
+      require('remarkable-plantuml')(md, {base_path: './static'});
+    }
+  ]
 };
 
 module.exports = siteConfig;
