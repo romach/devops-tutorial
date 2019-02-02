@@ -13,6 +13,7 @@ const BlogPost = require('../../core/BlogPost.js');
 const utils = require('../../core/utils.js');
 
 const Container = CompLibrary.Container;
+const GridBlock = CompLibrary.GridBlock;
 
 const Button = props => (
   <div className="pluginWrapper buttonWrapper">
@@ -78,7 +79,37 @@ class HomeSplash extends React.Component {
 class Index extends React.Component {
   render() {
     const {config: siteConfig, language = ''} = this.props;
-    const {baseUrl} = siteConfig;
+    const {baseUrl, docsUrl} = siteConfig;
+    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
+    const langPart = `${language ? `${language}/` : ''}`;
+    //todo: fix docUrl duplication
+    const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
+
+    const Block = props => (
+      <Container
+        padding={['bottom', 'top']}
+        id={props.id}
+        background={props.background}>
+        <GridBlock
+          align="center"
+          contents={props.children}
+          layout={props.layout}
+        />
+      </Container>
+    );
+
+    const Features = () => (
+      <Block layout="fourColumn" background="light">
+        {[
+          {
+            content: `<strong><a href="${docUrl('ansible/about.html')}">Ansible</a></strong> - open source automation platform`,
+            image: `${baseUrl}img/ansible_logo.svg`,
+            imageAlign: 'top',
+            title: 'Ansible',
+          },
+        ]}
+      </Block>
+    );
 
     const LastBlogPosts = () => (
       <Container className="mainContainer postContainer blogContainer">
@@ -107,6 +138,7 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language}/>
         <div className="mainContainer">
+          <Features/>
           <LastBlogPosts/>
         </div>
       </div>

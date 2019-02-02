@@ -9,6 +9,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.7.1"
+    "docusaurus": "^1.7.1",
+    "remarkable-plantuml": "1.1.0"
   }
 }
