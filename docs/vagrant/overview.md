@@ -1,7 +1,7 @@
 ---
-id: about
-title: About Vagrant
-sidebar_label: About
+id: overview
+title: Vagrant overview
+sidebar_label: Overview
 ---
 
 **Vagrant** - is a virtual machine manager developed by HashiCorp.

@@ -12,5 +12,5 @@ At this time there are tutorials:
     - [About Ansible](ansible/about.md)
     - [Install Ansible](ansible/install.md)
 - **Vagrant**
-    - [About Vagrant](vagrant/about.md)
-    - [Install Vagrant](vagrant/install.md)
+    - [Overview](vagrant/overview.md)
+    - [Installation](vagrant/installation.md)
