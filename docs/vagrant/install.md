@@ -6,12 +6,30 @@ sidebar_label: Install
 
 In this tutorial we will discuss how to install Vagrant, create `Vagrantfile` and manage Vagrant boxes.
 
-## Install VirtualBox and Vagrant:
+## Install VirtualBox:
 
 Because Vagrant uses VirtualBox to manage virtual machines, we need to install them locally.
 
-```bash
-sudo apt-get install virtualbox vagrant
+### Install VirtualBox
+Following command will download and installs VirtualBox.
+
+After installation we will delete downloaded archive because we don't need it anymore.
+
+```
+wget https://download.virtualbox.org/virtualbox/6.0.4/virtualbox-6.0_6.0.4-128413~Ubuntu~xenial_amd64.deb &&
+sudo apt -y install ./virtualbox-6.0_6.0.4-128413~Ubuntu~xenial_amd64.deb &&
+rm virtualbox-6.0_6.0.4-128413~Ubuntu~xenial_amd64.deb
+```
+
+### Install Vagrant
+Following command will download and installs VirtualBox.
+
+After installation we will delete downloaded archive because we don't need it anymore.
+
+```
+wget https://releases.hashicorp.com/vagrant/2.2.3/vagrant_2.2.3_x86_64.deb &&
+sudo apt -y install ./vagrant_2.2.3_x86_64.deb &&
+rm vagrant_2.2.3_x86_64.deb
 ```
 
 ## Generate private and public ssh keys
