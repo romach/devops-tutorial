@@ -102,7 +102,7 @@ class Index extends React.Component {
       <Block layout="fourColumn" background="light">
         {[
           {
-            content: `<strong><a href="${docUrl('ansible/about.html')}">Ansible</a></strong> - open source automation platform`,
+            content: `<strong><a href="${docUrl('ansible/overview.html')}">Ansible</a></strong> - open source automation platform`,
             image: `${baseUrl}img/ansible_logo.svg`,
             imageAlign: 'top',
             title: 'Ansible',
