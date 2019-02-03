@@ -1,7 +1,7 @@
 ---
-id: about
-title: About Ansible
-sidebar_label: About
+id: overview
+title: Ansible overview
+sidebar_label: Overview
 ---
 
 **Ansible** - tool that helps to automate such tasks as:

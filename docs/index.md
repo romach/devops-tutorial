@@ -9,8 +9,8 @@ This is main page of DevOps tutorials.
 At this time there are tutorials:
 
 - **Ansible**
-    - [About Ansible](ansible/about.md)
-    - [Install Ansible](ansible/install.md)
+    - [Overview](ansible/overview.md)
+    - [Installation](ansible/installation.md)
 - **Vagrant**
     - [Overview](vagrant/overview.md)
     - [Installation](vagrant/installation.md)

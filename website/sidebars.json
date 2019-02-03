@@ -4,8 +4,8 @@
       "index"
     ],
     "Ansible": [
-      "ansible/about",
-      "ansible/install"
+      "ansible/overview",
+      "ansible/installation"
     ],
     "Vagrant": [
       "vagrant/overview",

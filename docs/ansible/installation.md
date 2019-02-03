@@ -1,7 +1,7 @@
 ---
-id: install
-title: Install Ansible
-sidebar_label: Install
+id: installation
+title: Ansible installation
+sidebar_label: Installation
 ---
 
 Ansible allows you to manage remote servers (**nodes**) from your local machine (**control machine**).
