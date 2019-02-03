@@ -4,6 +4,8 @@ title: Install Vagrant
 sidebar_label: Install
 ---
 
+In this tutorial we will discuss how to install Vagrant, create `Vagrantfile` and manage Vagrant boxes.
+
 ## Install VirtualBox and Vagrant:
 
 Because Vagrant uses VirtualBox to manage virtual machines, we need to install them locally.
@@ -57,9 +59,9 @@ end
 
 > We use `centos/7` image. You can find other images at [Vagrant Cloud](https://app.vagrantup.com/boxes/search).
 
-> **Vagrant Box** - synonym for **virtual machine** - prepackaged development environments that is the foundation of Vagrant.
-
 ## Launch Vagrant box
+
+> **Vagrant Box** - synonym for **virtual machine** - prepackaged development environments that is the foundation of Vagrant.
 
 Run virtual machine using created `Vagrantfile`.
 
