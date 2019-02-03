@@ -93,6 +93,39 @@ vagrant up
 ssh vagrant@192.168.50.4.nip.io
 ```
 
+## Snapshots
+
+**Snapshot** - saved Virtual Machine state. Snapshots are useful when you want to restore VM state after particular
+action (f.e. install software, configuration).
+
+### Create snapshot
+
+To create snapshot you can use `snapshot save` command:
+
+```bash
+vagrant snapshot save fresh
+```
+
+This command will create snapshot with name `fresh`.
+
+### Snapshots list
+
+To get snapshots list you can use `snapshot list` command.
+
+```bash
+vagrant snapshot list
+```
+
+### Restore snapshot
+
+To restore VM state in some snapshot you can use `snapshot restore` command.
+
+```bash
+snapshot restore fresh
+```
+
+This command will restore `fresh` snapshot.
+
 ## Stop virtual machine
 
 When you finish working with virtual machine you can `halt` it. This command gracefully shut down the guest operating
@@ -104,7 +137,7 @@ vagrant halt
 
 ## Check virtual machine status
 
-To check virtual machine status you can use `status command`
+To check virtual machine status you can use `status` command.
 
 ```bash
 vagrant status
@@ -112,8 +145,9 @@ vagrant status
 
 ## Destroy virtual machine
 
-If you want completely delete virtual machine from your environment use `destroy` command.  It'll stop the guest
-machine, power it down, and remove all of the guest hard disks.
+If you want completely delete virtual machine from your environment use `destroy` command.
+
+It'll stop the guest machine, power it down, and remove all of the guest hard disks.
 
 ```bash
 vagrant destroy
