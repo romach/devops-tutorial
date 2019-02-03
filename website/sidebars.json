@@ -6,6 +6,10 @@
     "Ansible": [
       "ansible/about",
       "ansible/install"
+    ],
+    "Vagrant": [
+      "vagrant/about",
+      "vagrant/install"
     ]
   }
 }

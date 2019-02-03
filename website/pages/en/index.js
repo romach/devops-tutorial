@@ -107,6 +107,12 @@ class Index extends React.Component {
             imageAlign: 'top',
             title: 'Ansible',
           },
+          {
+            content: `<strong><a href="${docUrl('vagrant/about.html')}">Vagrant</a></strong> - virtual machine manager`,
+            image: `${baseUrl}img/vagrant_logo.svg`,
+            imageAlign: 'top',
+            title: 'Vagrant',
+          },
         ]}
       </Block>
     );
