@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Install Vagrant · DevOps tutorial</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;In this tutorial we will discuss how to install Vagrant, create &lt;code&gt;Vagrantfile&lt;/code&gt; and manage Vagrant boxes.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Install Vagrant · DevOps tutorial"/><meta property="og:type" content="website"/><meta property="og:url" content="https://romach.github.io/devops-tutorial/index.html"/><meta property="og:description" content="&lt;p&gt;In this tutorial we will discuss how to install Vagrant, create &lt;code&gt;Vagrantfile&lt;/code&gt; and manage Vagrant boxes.&lt;/p&gt;
+"/><meta property="og:image" content="https://romach.github.io/devops-tutorial/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://romach.github.io/devops-tutorial/img/favicon.png"/><link rel="shortcut icon" href="/devops-tutorial/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css"/><link rel="alternate" type="application/atom+xml" href="https://romach.github.io/devops-tutorial/blog/atom.xml" title="DevOps tutorial Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://romach.github.io/devops-tutorial/blog/feed.xml" title="DevOps tutorial Blog RSS Feed"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-133351340-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-133351340-1');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/devops-tutorial/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/devops-tutorial/css/main.css"/><script src="/devops-tutorial/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/devops-tutorial/"><img class="logo" src="/devops-tutorial/img/gear.svg" alt="DevOps tutorial"/><h2 class="headerTitleWithLogo">DevOps tutorial</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/devops-tutorial/docs/" target="_self">Tutorial</a></li><li class=""><a href="/devops-tutorial/blog/" target="_self">Blog</a></li><li class=""><a href="https://gitter.im/devops-tutorial-chat/community" target="_self">Chat</a></li><li class=""><a href="https://github.com/romach/devops-tutorial/" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Vagrant</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Main<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/devops-tutorial/docs/">Main page</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ansible<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/devops-tutorial/docs/ansible/about">About</a></li><li class="navListItem"><a class="navItem" href="/devops-tutorial/docs/ansible/install">Install</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Vagrant<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/devops-tutorial/docs/vagrant/about">About</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/devops-tutorial/docs/vagrant/install">Install</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/romach/devops-tutorial/edit/master/docs/vagrant/install.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Install Vagrant</h1></header><article><div><span><p>In this tutorial we will discuss how to install Vagrant, create <code>Vagrantfile</code> and manage Vagrant boxes.</p>
+<h2><a class="anchor" aria-hidden="true" id="install-virtualbox-and-vagrant"></a><a href="#install-virtualbox-and-vagrant" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install VirtualBox and Vagrant:</h2>
+<p>Because Vagrant uses VirtualBox to manage virtual machines, we need to install them locally.</p>
+<pre><code class="hljs css language-bash">sudo apt-get install virtualbox vagrant
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="generate-private-and-public-ssh-keys"></a><a href="#generate-private-and-public-ssh-keys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Generate private and public ssh keys</h2>
+<p>We need to create generate private and public ssh keys to inject them into virtual machines managed by Vagrant.</p>
+<pre><code class="hljs css language-bash">ssh-keygen -t rsa -C <span class="hljs-string">"youremail@example.com"</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="create-vagrantfile"></a><a href="#create-vagrantfile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create <code>Vagrantfile</code></h2>
+<p>To tell Vagrant how to create virtual machine we need to create configuration file (Vagrantfile).</p>
+<pre><code class="hljs css language-ruby"><span class="hljs-comment"># -*- mode: ruby -*-</span>
+<span class="hljs-comment"># vi: set ft=ruby :</span>
+
+<span class="hljs-comment"># we use last version of Vagrant API</span>
+API_VERSION = <span class="hljs-string">"2"</span>
+<span class="hljs-comment"># base image for virtual machine</span>
+BOX_NAME    = <span class="hljs-string">"centos/7"</span>
+<span class="hljs-comment"># private IP address of the machine</span>
+BOX_IP      = <span class="hljs-string">"192.168.50.4"</span>
+DOMAIN      = <span class="hljs-string">"nip.io"</span>
+PRIVATE_KEY = <span class="hljs-string">"~/.ssh/id_rsa"</span>
+<span class="hljs-comment"># will be injected to the host so we can access it</span>
+PUBLIC_KEY  = <span class="hljs-string">'~/.ssh/id_rsa.pub'</span>
+
+Vagrant.configure(API_VERSION) <span class="hljs-keyword">do</span> <span class="hljs-params">|config|</span>
+  config.vm.box = BOX_NAME
+  config.vm.network <span class="hljs-string">"private_network"</span>, <span class="hljs-symbol">ip:</span> BOX_IP
+  config.vm.host_name = BOX_IP + <span class="hljs-string">'.'</span> + DOMAIN
+  config.ssh.insert_key = <span class="hljs-literal">false</span>
+  config.ssh.private_key_path = [PRIVATE_KEY, <span class="hljs-string">"~/.vagrant.d/insecure_private_key"</span>]
+  config.vm.provision <span class="hljs-string">"file"</span>, <span class="hljs-symbol">source:</span> PUBLIC_KEY, <span class="hljs-symbol">destination:</span> <span class="hljs-string">"~/.ssh/authorized_keys"</span>
+
+  config.vm.provider <span class="hljs-string">"virtualbox"</span> <span class="hljs-keyword">do</span> <span class="hljs-params">|v|</span>
+    v.memory = <span class="hljs-string">"2024"</span>
+    v.cpus = <span class="hljs-string">"2"</span>
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span>
+</code></pre>
+<blockquote>
+<p>We use <code>centos/7</code> image. You can find other images at <a href="https://app.vagrantup.com/boxes/search">Vagrant Cloud</a>.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="launch-vagrant-box"></a><a href="#launch-vagrant-box" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Launch Vagrant box</h2>
+<blockquote>
+<p><strong>Vagrant Box</strong> - synonym for <strong>virtual machine</strong> - prepackaged development environments that is the foundation of Vagrant.</p>
+</blockquote>
+<p>Run virtual machine using created <code>Vagrantfile</code>.</p>
+<pre><code class="hljs css language-bash">vagrant up
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="enter-to-virtual-machine"></a><a href="#enter-to-virtual-machine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enter to virtual machine</h2>
+<pre><code class="hljs css language-bash">ssh vagrant@192.168.50.4.nip.io
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="stop-virtual-machine"></a><a href="#stop-virtual-machine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stop virtual machine</h2>
+<p>When you finish working with virtual machine you can <code>halt</code> it. This command gracefully shut down the guest operating
+system and power down the guest machine.</p>
+<pre><code class="hljs css language-bash">vagrant halt
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="check-virtual-machine-status"></a><a href="#check-virtual-machine-status" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Check virtual machine status</h2>
+<p>To check virtual machine status you can use <code>status command</code></p>
+<pre><code class="hljs css language-bash">vagrant status
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="destroy-virtual-machine"></a><a href="#destroy-virtual-machine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Destroy virtual machine</h2>
+<p>If you want completely delete virtual machine from your environment use <code>destroy</code> command.  It'll stop the guest
+machine, power it down, and remove all of the guest hard disks.</p>
+<pre><code class="hljs css language-bash">vagrant destroy
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="links"></a><a href="#links" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Links</h2>
+<ul>
+<li><a href="https://www.vagrantup.com/intro/getting-started/install.html">Official documentation</a></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-2-3 by Roman Cherepanov</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/devops-tutorial/docs/vagrant/about"><span class="arrow-prev">← </span><span>About</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#install-virtualbox-and-vagrant">Install VirtualBox and Vagrant:</a></li><li><a href="#generate-private-and-public-ssh-keys">Generate private and public ssh keys</a></li><li><a href="#create-vagrantfile">Create <code>Vagrantfile</code></a></li><li><a href="#launch-vagrant-box">Launch Vagrant box</a></li><li><a href="#enter-to-virtual-machine">Enter to virtual machine</a></li><li><a href="#stop-virtual-machine">Stop virtual machine</a></li><li><a href="#check-virtual-machine-status">Check virtual machine status</a></li><li><a href="#destroy-virtual-machine">Destroy virtual machine</a></li><li><a href="#links">Links</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/devops-tutorial/" class="nav-home"><img src="/devops-tutorial/img/gear.svg" alt="DevOps tutorial" width="66" height="58"/></a><div><h5>Tutorial</h5><a href="/devops-tutorial/docs/en/index.html">Index</a></div><div><h5>More</h5><a href="/devops-tutorial/blog">Blog</a><a href="https://gitter.im/devops-tutorial-chat/community">Chat</a><a href="https://github.com/romach/devops-tutorial/">GitHub</a><a class="github-button" href="https://github.com/romach/devops-tutorial/" data-icon="octicon-star" data-count-href="/romach/devops-tutorial/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Roman Cherepanov</section></footer></div></body></html>
