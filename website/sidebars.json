@@ -8,8 +8,8 @@
       "ansible/install"
     ],
     "Vagrant": [
-      "vagrant/about",
-      "vagrant/install"
+      "vagrant/overview",
+      "vagrant/installation"
     ]
   }
 }

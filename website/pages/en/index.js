@@ -102,13 +102,13 @@ class Index extends React.Component {
       <Block layout="fourColumn" background="light">
         {[
           {
-            content: `<strong><a href="${docUrl('ansible/overview.html')}">Ansible</a></strong> - open source automation platform`,
+            content: `<strong><a href="${docUrl('ansible/about')}">Ansible</a></strong> - open source automation platform`,
             image: `${baseUrl}img/ansible_logo.svg`,
             imageAlign: 'top',
             title: 'Ansible',
           },
           {
-            content: `<strong><a href="${docUrl('vagrant/about.html')}">Vagrant</a></strong> - virtual machine manager`,
+            content: `<strong><a href="${docUrl('vagrant/overview')}">Vagrant</a></strong> - virtual machine manager`,
             image: `${baseUrl}img/vagrant_logo.svg`,
             imageAlign: 'top',
             title: 'Vagrant',
