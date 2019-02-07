@@ -121,7 +121,7 @@ vagrant snapshot list
 To restore VM state in some snapshot you can use `snapshot restore` command.
 
 ```bash
-snapshot restore fresh
+vagrant snapshot restore fresh
 ```
 
 This command will restore `fresh` snapshot.
