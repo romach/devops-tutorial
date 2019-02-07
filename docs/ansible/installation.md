@@ -42,7 +42,7 @@ You need ssh access to your **Node** machine.
 Also `Python` have to be installed on *node* machine.
 
 ```bash
-apt-get install python-minimal
+sudo apt-get -y install python-minimal
 ```
 
 ## Links
