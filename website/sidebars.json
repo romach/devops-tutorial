@@ -5,7 +5,8 @@
     ],
     "Ansible": [
       "ansible/overview",
-      "ansible/installation"
+      "ansible/installation",
+      "ansible/run-commands"
     ],
     "Vagrant": [
       "vagrant/overview",
